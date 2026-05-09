@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Name Game</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .game-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #e63946;
+  }
+
+  #result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #444;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="game-box">
+  <h1>🎮 Name Game</h1>
+
+  <input type="text" id="name" placeholder="Enter your name">
+
+  <button onclick="showMessage()">Play</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function showMessage() {
+  let name = document.getElementById("name").value;
+
+  if(name === "") {
+    document.getElementById("result").innerHTML =
+      "Please enter your name!";
+  } else {
+    document.getElementById("result").innerHTML =
+      "✨ Hello " + name + "! You are amazing! ✨";
+  }
+}
+</script>
+
+</body>
+</html>
